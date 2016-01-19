@@ -2,9 +2,9 @@
 // create_product.php
 require_once __DIR__ . "/../bootstrap.php";
 
-$newProductName = $argv[1];
+$newProductName = 'Test' . time();
 
-$product = new Product();
+$product = new \DoctrineTest\Entity\Product();
 $product->setName($newProductName);
 
 $entityManager->persist($product);
